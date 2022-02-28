@@ -1,0 +1,41 @@
+% Versión 3.0 (19/01/2022)
+% Daniel (danieeelxy@gmail.com)
+
+
+% Preámbulo
+
+\documentclass[a4paper, 9pt, openany, oneside]{memoir}
+
+
+% Ruta de archivos, instalación de paquetes y ruta de imágenes
+
+\makeatletter
+\def\input@path{{/path/}}
+\makeatother
+
+\input{lib/packages}
+
+\graphicspath{{./img/}}
+
+
+% Definición de comandos
+
+\input{lib/sty/colors}
+\input{lib/sty/fonts}
+\input{lib/sty/page}
+\input{lib/sty/titles}
+\input{lib/sty/text}
+\input{lib/sty/cover}
+\input{lib/sty/toc}
+\input{lib/sty/bib}
+
+\input{lib/eqn/math}
+\input{lib/eqn/operators}
+
+\input{lib/env/blocks}
+\input{lib/env/tables}
+
+
+% Configuración inicial
+
+\autor{Daniel Lobos}
