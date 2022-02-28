@@ -1,2 +1,2 @@
-# dla-template
-XeLaTeX template for taking lecture notes
+# DLA Template
+XeLaTeX template for taking lecture notes.
