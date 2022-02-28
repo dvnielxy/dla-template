@@ -1,0 +1,140 @@
+% Definición de parte real e imaginaria
+
+\AtBeginDocument{\renewcommand{\Re}{\mathfrak{Re}}}
+\AtBeginDocument{\renewcommand{\Im}{\mathfrak{Im}}}
+
+
+% Definición de símbolos de conjuntos
+
+\AtBeginDocument{\renewcommand{\varnothing}{\diameter}}
+\AtBeginDocument{\renewcommand{\setminus}{\smallsetminus}}
+\newcommand{\normal}{\unlhd}
+\newcommand{\parts}[1]{\mathcal{P}\parn*{#1}}
+\newcommand{\Matrix}[2]{\mathcal{M}_{#1}\parn*{#2}}
+\newcommand{\GL}[1]{\mathrm{GL}\parn*{#1}}
+\newcommand{\SL}[1]{\mathrm{SL}\parn*{#1}}
+\newcommand{\Ort}[1]{\mathrm{O}\parn*{#1}}
+\newcommand{\SO}[1]{\mathrm{SO}\parn*{#1}}
+
+
+% Vectores, matrices y símbolos diferenciales
+
+\newcommand{\ve}[1]{\symbfup{#1}}
+\newcommand{\vi}[1]{\symbfit{#1}}
+\newcommand{\un}[1]{\hat{\symbfup{#1}}}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\Dif}{\mathrm{D}}
+\def\difbar{{\mathchar'26\mkern-12mu d}}
+\newcommand{\tp}{{\mathsf{T}}}
+
+
+% Símbolo QED
+
+\renewcommand{\qedsymbol}{\(\blockfull\)}
+
+
+% Flechas y cancelación
+
+\renewcommand{\implies}{\Rightarrow}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\inyto}{\hookrightarrow}
+\newcommand{\epito}{\twoheadrightarrow}
+
+\let\cancelorigcolor\CancelColor
+\newcommand{\xcancelto}[3][]{
+	\ifblank{#1}{}{
+		\renewcommand{\CancelColor}{#1}
+		}
+	\cancelto{#2}{#3}
+	}
+
+
+% Comandos de fuentes
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\renewcommand{\cal}[1]{\mathcal{#1}}
+\newcommand{\scr}[1]{\mathscr{#1}}
+
+\DeclareSymbolFontAlphabet{\amsmathbb}{AMSb}
+\newcommand{\A}{\amsmathbb{A}}
+\newcommand{\B}{\amsmathbb{B}}
+\newcommand{\C}{\amsmathbb{C}}
+\newcommand{\D}{\amsmathbb{D}}
+\newcommand{\E}{\amsmathbb{E}}
+\newcommand{\F}{\amsmathbb{F}}
+\newcommand{\G}{\amsmathbb{G}}
+\renewcommand{\H}{\amsmathbb{H}}
+\newcommand{\I}{\amsmathbb{I}}
+\newcommand{\J}{\amsmathbb{J}}
+\newcommand{\K}{\amsmathbb{K}}
+\renewcommand{\L}{\amsmathbb{L}}
+\newcommand{\M}{\amsmathbb{M}}
+\newcommand{\N}{\amsmathbb{N}}
+\renewcommand{\O}{\amsmathbb{O}}
+\renewcommand{\P}{\amsmathbb{P}}
+\newcommand{\Q}{\amsmathbb{Q}}
+\newcommand{\R}{\amsmathbb{R}}
+\renewcommand{\S}{\amsmathbb{S}}
+\newcommand{\T}{\amsmathbb{T}}
+\newcommand{\U}{\amsmathbb{U}}
+\newcommand{\V}{\amsmathbb{V}}
+\newcommand{\W}{\amsmathbb{W}}
+\newcommand{\X}{\amsmathbb{X}}
+\newcommand{\Y}{\amsmathbb{Y}}
+\newcommand{\Z}{\amsmathbb{Z}}
+
+
+% Símbolos físicos
+
+\newcommand{\lagrangian}{\mscrL}
+\newcommand{\hamiltonian}{\mscrH}
+\newcommand{\routhian}{\mscrR}
+\newcommand{\photon}{\upgamma}
+\newcommand{\electron}{\mathrm{e}}
+\newcommand{\proton}{\mathrm{p}}
+\newcommand{\neutron}{\mathrm{n}}
+\newcommand{\eneutrino}{\upnu_{\mathrm{e}}}
+\newcommand{\antieneutrino}{\bar{\upnu}_{\mathrm{e}}}
+\newcommand{\avogadro}{N_{\text{A}}}
+\newcommand{\boltzmann}{k_{\text{B}}}
+\newcommand{\NA}{\avogadro}
+\newcommand{\kB}{\boltzmann}
+
+
+% Delimitadores
+
+\newcommand{\tq}{\,\middle|\,}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\parenthesis{(}{)}
+\DeclarePairedDelimiter\brackets{[}{]}
+\DeclarePairedDelimiter\rbrackets{[}{)}
+\DeclarePairedDelimiter\lbrackets{(}{]}
+\DeclarePairedDelimiter\braces{\{}{\}}
+\DeclarePairedDelimiter\verts{|}{|}
+\DeclarePairedDelimiter\vverts{\|}{\|}
+\DeclarePairedDelimiter\angl{\langle}{\rangle}
+\DeclarePairedDelimiter\rbar{.}{|}
+\DeclarePairedDelimiter\bbrackets{\lBrack}{\rBrack}
+\DeclarePairedDelimiter\ket{|}{\rangle}
+\DeclarePairedDelimiter\bra{\langle}{|}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\tq#2}
+
+
+% Delimitadores (semántico)
+
+\newcommand{\set}{\braces}
+\newcommand{\abs}{\verts}
+\newcommand{\norm}{\vverts}
+\newcommand{\parn}{\parenthesis}
+\newcommand{\class}{\brackets}
+\newcommand{\open}{\parenthesis}
+\newcommand{\closed}{\brackets}
+\newcommand{\ropen}{\rbrackets}
+\newcommand{\lclosed}{\rbrackets}
+\newcommand{\lopen}{\lbrackets}
+\newcommand{\rclosed}{\lbrackets}
+\newcommand{\eval}{\rbar}
+\newcommand{\conm}{\brackets}
+\newcommand{\poisson}{\braces}
