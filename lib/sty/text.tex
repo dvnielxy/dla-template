@@ -1,0 +1,48 @@
+% Distancia entre párrafos e indentación
+
+\setlength{\parskip}{0.25cm}
+\setlength{\parindent}{1cm}
+
+
+% Definición de contadores
+
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+
+% Etiquetas de figuras y tablas
+
+\DeclareCaptionFont{gf}{\genfamily}
+\captionsetup[figure]{font={small}, labelfont={bf, gf}, name={Figura}}
+\captionsetup[table]{font={small}, labelfont={bf, gf}, name={Tabla}}
+\captionsetup{width=0.8\textwidth}
+
+
+% Configuración de listas
+
+\renewcommand{\labelenumi}{\bfseries\genfamily\textup{\arabic{enumi})}}
+\renewcommand{\labelenumii}{\bfseries\genfamily\textup{\alph{enumii})}}
+\renewcommand{\labelenumiii}{\bfseries\genfamily\textup{\roman{enumiii})}}
+\renewcommand{\labelitemi}{\bullet}
+\renewcommand{\labelitemii}{---}
+
+\setlist{itemsep=0.1cm, leftmargin=0.5cm, parsep=0.1cm}
+
+
+% Configuración de unidades
+
+\sisetup{output-decimal-marker={,}}
+\sisetup{separate-uncertainty=true}
+\sisetup{per-mode=reciprocal}
+\sisetup{bracket-unit-denominator=true}
+\sisetup{detect-weight=true}
+
+
+% Subrayado
+
+\renewcommand{\ULdepth}{0.06cm}
+\contourlength{0.02cm}
+\contournumber{64}
+
+\newcommand{\subr}[2][black]{{\color{#1}\uline{\phantom{#2}}}\llap{\contour{white}{#2}}}

@@ -1,0 +1,30 @@
+% Fijar estilo de referencias
+
+\bibliographystyle{apacite}
+
+
+% Fijar estilo español
+
+\AtBeginDocument{
+	\renewcommand\bibname{Bibliografía}
+	\renewcommand{\BCBT}{}
+	\renewcommand{\BCBL}{}
+	\renewcommand{\BOthers}[1]{et al.\hbox{}}
+	\renewcommand{\BOthersPeriod}[1]{y otros.\hbox{}}
+	\renewcommand{\BAnd}{y}
+	\renewcommand{\BBAA}{y}
+	\renewcommand{\BBAB}{y}
+	}
+
+
+% Espacio entre referencias de la bibliografía
+
+\setlength{\bibitemsep}{0.25cm}
+
+
+% Comando inicial de bibliografía
+
+\newcommand{\finish}[1]{
+	\bibliography{#1}
+	\thispagestyle{fancy}
+	}

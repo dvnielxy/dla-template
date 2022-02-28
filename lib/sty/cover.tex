@@ -1,0 +1,23 @@
+% Definición de la portada
+
+\newcommand{\cover}[3]{
+	\setcounter{page}{0}
+	\thispagestyle{empty}
+	\pagecolor{cover}
+	\color{white}
+	\begin{center}
+	\includegraphics[width=2cm]{saturn_white.eps}
+	\end{center}
+	\begin{center}
+	\genfamily
+	\vspace*{\fill}
+	\HUGE\uppercase{\textbf{\textit{#1}}}\\
+	\vspace*{\fill}
+	\Huge\textsignature{#2}\\
+	\vspace*{0.25cm}
+	{\normalsize#3}
+	\end{center}
+	\newpage
+	\pagecolor{white}
+	\color{black}
+	}

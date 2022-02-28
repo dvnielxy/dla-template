@@ -1,0 +1,35 @@
+% Márgenes
+
+\geometry{hmargin=3cm, vmargin=2cm}
+
+
+% Encabezados y pies de página
+
+\newcommand{\titulo}[1]{
+	\hypersetup{pdftitle={Apuntes de #1}}
+	\lfoot{\small\genfamily\itshape\color{foot}#1}
+	}
+\newcommand{\autor}[1]{
+	\hypersetup{pdfauthor={#1}}
+	\rfoot{\small\genfamily\color{foot}#1}
+	}
+
+\cfoot{\small\genfamily\color{foot}\thepage}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\chead{\small\genfamily\color{foot}\leftmark}
+
+\rhead{}
+\lhead{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\pagestyle{fancy}
+
+
+% Encabezado para el índice
+
+\fancypagestyle{index}{
+	\chead{\small\genfamily\color{foot}Índice}
+	}

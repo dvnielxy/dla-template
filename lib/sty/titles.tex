@@ -1,0 +1,38 @@
+% Contadores de enumeración
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+
+
+% Espacio entre enumeración y nombre
+
+\newcommand{\marginsecnumber}[1]{\makebox[0pt][r]{#1\hspace{6pt}}}
+
+
+% Formato de títulos
+
+\titleformat{\chapter}[display]
+	{\genfamily\mdseries}
+	{\centering\genfamily\HUGe\textcolor{titlecounter}{\thechapter}}
+	{0cm}
+	{\centering\Huge\genfamily\bfseries\MakeUppercase}
+
+\titleformat{\section}[hang]
+	{\Large\genfamily\bfseries}
+	{\marginsecnumber{\textcolor{titlecounter}{\thesection}}}
+	{0cm}
+	{\Large\genfamily\bfseries}
+
+\titleformat{\subsection}[hang]
+	{\large\genfamily\bfseries}
+	{\marginsecnumber{\textcolor{titlecounter}{\thesubsection}}}
+	{0cm}
+	{\large\genfamily\bfseries}
+
+\titleformat{\subsubsection}[hang]
+	{\normalsize\genfamily\bfseries}
+	{\marginsecnumber{\textcolor{titlecounter}{\thesubsubsection}}}
+	{0cm}
+	{\normalsize\genfamily\bfseries\itshape}

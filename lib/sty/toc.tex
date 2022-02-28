@@ -1,0 +1,26 @@
+% Tabla de contenidos
+
+\renewcommand{\printtoctitle}[1]{\centering\Huge\genfamily\bfseries\MakeUppercase#1}
+\renewcommand{\aftertoctitle}{\thispagestyle{fancy}\afterchaptertitle}
+\renewcommand*{\cftchapterpagefont}{\bfseries\genfamily}
+\renewcommand*{\cftsectionpagefont}{\small\genfamily}
+\renewcommand*{\cftsubsectionpagefont}{\small\genfamily}
+\renewcommand*{\cftchapterfont}{\bfseries\genfamily}
+\renewcommand*{\cftsectionfont}{\small\genfamily}
+\renewcommand*{\cftsubsectionfont}{\small\genfamily}
+\renewcommand{\cftsectionaftersnum}{.}
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+\setlength{\cftsectionindent}{0.5cm}
+\setlength{\cftsubsectionindent}{1cm}
+\setlength{\cftchapternumwidth}{0.5cm}
+\setlength{\cftsectionnumwidth}{0.5cm}
+\setlength{\cftsubsectionnumwidth}{0.5cm}
+
+
+% Comando inicial de portada y tabla de contenidos
+
+\newcommand{\start}[3]{%
+	\cover{#1}{#2}{#3}%
+	\tableofcontents%
+	\thispagestyle{index}
+	}

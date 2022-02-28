@@ -1,0 +1,37 @@
+% Tamaño de letra gigante
+
+\makeatletter
+\renewcommand\HUGE{\@setfontsize\Huge{38}{47}} 
+\makeatother
+
+\makeatletter
+\newcommand\HUGe{\@setfontsize\Huge{30}{35}} 
+\makeatother
+
+
+% Fuente genérica (títulos, portada, figuras, tablas, etc.)
+
+\newcommand{\setgenfont}[1]{
+	\newfontfamily\genfamily{#1}
+	\newenvironment{genericfont}{\genfamily}{\par}
+	\DeclareTextFontCommand{\textgen}{\genfamily}
+	}
+
+\setgenfont{Lato}
+
+
+% Fuente nombre
+
+\newcommand{\setsignaturefont}[1]{
+	\newfontfamily\signaturefamily{#1}
+	\newenvironment{signaturefont}{\signaturefamily}{\par}
+	\DeclareTextFontCommand{\textsignature}{\signaturefamily}
+	}
+
+\setsignaturefont{Lato}
+
+
+% Fuente principal y matemática
+
+\setmainfont[SmallCapsFont={Latin Modern Roman Caps}]{Latin Modern Roman}
+\setmathfont{Latin Modern Math}
